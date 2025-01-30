@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,20 +12,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header class="nav-bar">
-        <img src="imgs/logo.png" alt="GACOBRANZAS LOGO">
-        <input type="checkbox" id="nav-check">
+    <header>
+        <div class="logo">
+            <img src="imgs/logo.png" alt="LOGO">
+        </div>
+        <input type="checkbox" id="nav-check" hidden>
         <label for="nav-check" class="nav-check">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
-                <path
-                    d="M 2 9 L 2 11 L 48 11 L 48 9 L 2 9 z M 2 24 L 2 26 L 48 26 L 48 24 L 2 24 z M 2 39 L 2 41 L 48 41 L 48 39 L 2 39 z">
-                </path>
-            </svg>
+            <i class="fa-solid fa-bars"></i>
         </label>
         <ul class="nav-list">
             <li>
@@ -42,112 +40,41 @@
             </li>
         </ul>
     </header>
-    <main>
-        <div class="section section-diagonal">
-            <div class="cut-1">
-                <h1>Bienvenidos a Cobranzas GA</h1>
-                <h3>Servicios de cobranzas Paraguay SIN COSTE INICIAL</h3>
-            </div>
-            <div class="cut-2">
-                <img src="imgs/cards/0.jpg" alt="EMPLEADOS">
-            </div>
-        </div>
-        <section class="section section-cards">
-            <h2>Nuestros servicios</h2>
-            <div class="cards">
-                <div class="card">
-                    <i class="fa-solid fa-gavel"></i>
-                    <h4>Gestión Judicial y Extrajudicial</h4>
-                    Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto incluye
-                    desde la elaboración de demandas judiciales hasta la implementación de acuerdos extrajudiciales que
-                    faciliten el pago de las obligaciones pendientes. Nuestro equipo de abogados y gestores está
-                    altamente capacitado para manejar cada etapa del proceso, garantizando un enfoque estratégico y
-                    eficiente.
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-money-bills"></i>
-                    <h4>Recuperación de Pagos Pendientes</h4>
-                    Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
-                    gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de negociación
-                    y seguimiento, asegurando que cada gestión sea efectiva y que el dinero pendiente vuelva a tus
-                    cuentas lo más pronto posible.
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-money-bill-transfer"></i>
-                    <h4>Especializacion en Deudas Incobrables</h4>
-                    No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para afrontar
-                    los desafíos más difíciles. Contamos con un equipo especializado en la recuperación de deudas
-                    consideradas incobrables, utilizando métodos y tecnologías de vanguardia para localizar y contactar
-                    a los deudores, incrementando significativamente las posibilidades de éxito.
-                </div>
-            </div>
-        </section>
-        <section class="section section-repeat">
-            <div class="skew-element">
-                <div class="content">
-                    <h2>¿Por qué elegirnos?</h2>
-                    Nuestros servicios no tienen costo inicial. Solo cobramos en función de nuestra productividad,
-                    asegurando que nuestros intereses estén alineados con los tuyos. Esto significa que solo pagas
-                    cuando logramos resultados, lo que demuestra nuestro compromiso con la eficiencia y el éxito.
-                </div>
-            </div>
-        </section>
-        <section class="section section-contact">
-            <div class="section-title">
-                <h2>Contácta con nuestros servicios</h2>
-            </div>
-            <form>
-                <div class="content">
-                    <div class="input-wrapper">
-                        <label for="username">Nombre</label>
-                        <input type="text" name="username" id="username">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="email">Dirección de correo</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="phone">Telefono (opcional)</label>
-                        <input type="text" name="phone" id="phone">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="about">Asunto</label>
-                        <select name="about" id="about">
-                            <option value="employment">Propuesta de empleo</option>
-                            <option value="service">Busco servicio</option>
-                            <option value="other">Otros</option>
-                        </select>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="message">Escribe tu mensaje</label>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="submit" value="Enviar correo">
-                    </div>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <img src="imgs/logo.png" alt="COBRANZASGA LOGO">
+    <section class="hero">
         <div class="content">
-            <div class="wrapper">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>+595 972 883 736</span>
+            <h1>Bienvenido a Cobranzas GA</h1>
+            <h3>Empresa de gestión de cobranzas SIN COSTE INICIAL en <span>Paraguay</span></h3>
+        </div>
+        <div class="img">
+            <img src="imgs/cards/0.jpg" alt="">
+        </div>
+    </section>
+    <section class="wrapper dark">
+        <h2>Nuestros servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="skew-el"></div>
+                <img src="imgs/cards/1.jpg" alt="">
+                <div class="text">
+                    <h4>Gestiones Judiciales y Extrajudiciales</h4>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus alias eaque ipsum, culpa nihil cupiditate quis cumque, natus reprehenderit rem possimus odio? Aliquam expedita repellendus ducimus culpa ut temporibus? Ad.                </div>
             </div>
-            <hr>
-            <div class="wrapper">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>San Lorenzo, Paraguay</span>
+            <div class="card">
+                <div class="skew-el"></div>
+                <img src="imgs/cards/1.jpg" alt="">
+                <div class="text">
+                    <h4>Recuperación de Pagos Pendientes</h4>
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nulla, omnis sit maiores quod laudantium? Accusantium et, similique quisquam quam atque culpa? Quibusdam inventore qui repellat, suscipit sit exercitationem. Aliquam.                </div>
             </div>
-            <hr>
-            <div class="wrapper">
-                <i class="fa-solid fa-at"></i>
-                <span>fenixcobranzas123@gmail.com</span>
+            <div class="card">
+                <div class="skew-el"></div>
+                <img src="imgs/cards/1.jpg" alt="">
+                <div class="text">
+                    <h4>Especialización en Deudas Incobrables</h4>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illum, laborum, cumque reiciendis, error expedita voluptatibus accusamus aliquid quidem facere saepe vel animi. Delectus inventore non possimus libero. Odit, soluta.                </div>
             </div>
         </div>
-    </footer>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
@@ -155,89 +82,107 @@
         function closeNav() {
             document.getElementById("nav-check").checked = false;
         }
-
-        function getStyle(str, prop) {
-            let cssVar = styles.getPropertyValue(prop);
-
-            if (cssVar == "")
-                console.log(prop + ": variable no encontrada");
-
-            return str + " " + cssVar;
+        
+        function getStyle(cssRootStr) {
+            const rootVar = window.getComputedStyle(document.body).getPropertyValue(cssRootStr);
+            if (rootVar == "") {
+                console.log("root variable no encontrada");
+                return ""
+            }
+            return rootVar;
         }
 
         gsap.registerPlugin(ScrollTrigger);
+        
+        const tlHero = gsap.timeline({
+            defaults: {
+                duration: 2,
+                ease: "expo.inOut"
+            }
+        });
 
-        const styles = getComputedStyle(document.documentElement);
-        const tl = gsap.timeline({ 
-            scrollTrigger: {
-                target: ".section",
-                start: "top top",
-                end: "bottom +=120%",
-                scrub: 1,
-                markers: true
-            }       
-        });
-        const tlHero = gsap.timeline({defaults: { ease: "expo.inOut", duration: 1 }});
-        tlHero.from(".nav-bar", {
-            backgroundImage: "linear-gradient(0deg, #00000000 10%, #000000ff 40%)",
-        });
-        tlHero.fromTo(".section-diagonal .cut-2", {
+        tlHero.to("header", {
+            backgroundPosition: 0,
+            backgroundColor: getStyle("--primary-dark"),
+            duration: 4,
+        })
+
+        tlHero.fromTo(".hero", {
+            backgroundImage: `linear-gradient(90deg, ${getStyle("--primary-yellow")} 50%, ${getStyle("--primary-dark")} 50%)`
+        }, {
+            backgroundImage: `linear-gradient(45deg, ${getStyle("--primary-yellow")} 50%, ${getStyle("--primary-dark")} 50%)`,
+        }, "<")
+        
+        tlHero.fromTo(".hero .img", {
             opacity: 0,
+            xPercent: 100
         }, {
             opacity: 1,
-            maskImage: "linear-gradient(to left, black 50%, transparent 100%)",
-            duration: 1,
-            ease: "power2.out"
-        });
-        tlHero.fromTo(".section-diagonal .cut-1", {
+            xPercent: 0,
+        }, "<1");
+
+        tlHero.fromTo(".hero .content > *", {
             opacity: 0,
             xPercent: -100
         }, {
             opacity: 1,
+            color: getStyle("--primary-white"),
             xPercent: 0,
+            ease: "power4.out",
+            stagger: 0.1
+        }, "<1");
+
+        tlHero.to(".hero .content h1", {
+            textShadow: `0.1em 0.1em ${getStyle("--secondary-yellow")}`,
         }, "<");
-        tlHero.fromTo(".section-diagonal .cut-1 h1", {
-            textShadow: "0px 0px"
-        }, {
-            textShadow: getStyle("9px 9px", "--secondary-yellow")
+
+        tlHero.to(".hero .content span", {
+            padding: ".7em",
+            backgroundImage: "linear-gradient(to bottom, red 0% 33%, white 33% 66%, blue 66% 100%)",
+            color: getStyle("--primary-dark"),
+            textShadow: `1px 1px ${getStyle("--secondary-yellow")}`
+        }, "-=1");
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".wrapper",
+                start: "top center",
+            }
         });
 
-        if (window.innerWidth >= 992) {
-            tl.fromTo(".section-cards .cards .card", {
-                skewX: "0deg",
-            }, {
-                skewX: "-5deg",
-            });
+        tl.to("header", {
+            maxHeight: "75px",
+            scrollTrigger: {
+                trigger: "header",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1,
+            }
+        })
 
-            tl.fromTo(".section-cards .cards .card", {
-                boxShadow: "0px 0px #000"
-            }, {
-                boxShadow: getStyle("14px 14px", "--secondary-yellow"),
-            });
-        }
-        
-        tl.from(".section-repeat .skew-element", {
+        tl.fromTo(".card", {
             opacity: 0,
-            transform: "skewY(0deg)",
-            boxShadow: "0px 0px #000",
-            ease: "power4.inOut"
-        });
-        tl.fromTo((".section-contact h2"), {
-            padding: "0px",
-            opacity: 0,
-            xPercent: -100,
+            yPercent: -10
         }, {
-            padding: "30px 40px",
             opacity: 1,
-            xPercent: 0,
-            backgroundColor: getStyle("", "--secondary-yellow"),
-            clipPath: "polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%)"
+            yPercent: 0,
+            boxShadow: `10px 10px ${getStyle("--primary-yellow")}`,
         });
-        tl.to(".section-contact .content", {
-            xPercent: window.innerWidth > 992 ? -5 : 0,
-            yPercent: -5,
-            boxShadow: getStyle("10px 5px", "--secondary-yellow"),
-            onStart: () => { document.getElementById("username").focus() }
+
+        tl.fromTo(".card .skew-el", {
+            opacity: 0,
+            clipPath: "polygon(25% 0%, 100% 0%, 100% 0, 25% 0)",
+        }, {
+            opacity: 1,
+            clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%",
+        })
+
+        gsap.to("body", {
+            backgroundColor: getStyle("--primary-dark"),
+            scrollTrigger: {
+                trigger: ".dark",
+                start: "top bottom",
+            }
         });
     </script>
 </body>
