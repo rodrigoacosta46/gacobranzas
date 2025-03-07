@@ -4,187 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="imgs/logo.png" alt="LOGO">
-        </div>
-        <input type="checkbox" id="nav-check" hidden>
-        <label for="nav-check" class="nav-check">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <ul class="nav-list">
-            <li>
-                <a onclick="closeNav()" href="#">Inicio</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Nosotros</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Servicios</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Contáctanos</a>
-            </li>
-        </ul>
+    <header class="navbar">
+        <nav>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="hero">
-        <div class="content">
-            <h1>Bienvenido a Cobranzas GA</h1>
-            <h3>Empresa de gestión de cobranzas SIN COSTE INICIAL en <span>Paraguay</span></h3>
-        </div>
-        <div class="img">
-            <img src="imgs/cards/0.jpg" alt="">
-        </div>
-    </section>
-    <section class="wrapper dark">
-        <h2>Nuestros servicios</h2>
-        <div class="cards">
-            <div class="card">
-                <div class="skew-el"></div>
-                <img src="imgs/cards/1.jpg" alt="">
-                <div class="text">
-                    <h4>Gestiones Judiciales y Extrajudiciales</h4>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus alias eaque ipsum, culpa nihil cupiditate quis cumque, natus reprehenderit rem possimus odio? Aliquam expedita repellendus ducimus culpa ut temporibus? Ad.                </div>
+    <div class="cascade">
+        <img src="imgs/logo.png" class="cascade__logo">
+    </div>
+    <div class="sections">
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Cobranzas GA</h1>
+                <h2 class="hero__about">Servicios de cobranzas sin costo inicial en Paraguay</h2>
             </div>
-            <div class="card">
-                <div class="skew-el"></div>
-                <img src="imgs/cards/1.jpg" alt="">
-                <div class="text">
-                    <h4>Recuperación de Pagos Pendientes</h4>
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae nulla, omnis sit maiores quod laudantium? Accusantium et, similique quisquam quam atque culpa? Quibusdam inventore qui repellat, suscipit sit exercitationem. Aliquam.                </div>
+        </section>
+        <section class="services">
+            <h2 class="services__title">Nuestros servicios</h2>
+            <div class="services__cards">
+                <details class="card">
+                    <summary class="card__title">Gestion Judicial y Extra Judicial</summary>
+                    <p class="card__content">
+                        Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto
+                        incluye desde la elaboración de demandas judiciales hasta la implementación de acuerdos
+                        extrajudiciales que faciliten el pago de las obligaciones pendientes. Nuestro equipo de abogados
+                        y gestores está altamente capacitado para manejar cada etapa del proceso, garantizando un
+                        enfoque estratégico y eficiente.
+                    </p>
+                </details>
+                <details class="card">
+                    <summary class="card__title">Recuperación de Pagos Pendientes
+                    </summary>
+                    <p class="card__content">
+                        Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
+                        gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de
+                        negociación y seguimiento, asegurando que cada gestión sea efectiva y que el dinero pendiente
+                        vuelva a tus cuentas lo más pronto posible.
+                    </p>
+                </details>
+                <details class="card">
+                    <summary class="card__title">Especialización en Deudas Incobrables
+                    </summary>
+                    <p class="card__content">
+                        No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para
+                        afrontar los desafíos más difíciles. Contamos con un equipo especializado en la recuperación de
+                        deudas consideradas incobrables, utilizando métodos y tecnologías de vanguardia para localizar y
+                        contactar a los deudores, incrementando significativamente las posibilidades de éxito.
+                    </p>
+                </details>
             </div>
-            <div class="card">
-                <div class="skew-el"></div>
-                <img src="imgs/cards/1.jpg" alt="">
-                <div class="text">
-                    <h4>Especialización en Deudas Incobrables</h4>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illum, laborum, cumque reiciendis, error expedita voluptatibus accusamus aliquid quidem facere saepe vel animi. Delectus inventore non possimus libero. Odit, soluta.                </div>
-            </div>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-
-    <script>
-        function closeNav() {
-            document.getElementById("nav-check").checked = false;
-        }
-        
-        function getStyle(cssRootStr) {
-            const rootVar = window.getComputedStyle(document.body).getPropertyValue(cssRootStr);
-            if (rootVar == "") {
-                console.log("root variable no encontrada");
-                return ""
-            }
-            return rootVar;
-        }
-
-        gsap.registerPlugin(ScrollTrigger);
-        
-        const tlHero = gsap.timeline({
-            defaults: {
-                duration: 2,
-                ease: "expo.inOut"
-            }
-        });
-
-        tlHero.to("header", {
-            backgroundPosition: 0,
-            backgroundColor: getStyle("--primary-dark"),
-            duration: 4,
-        })
-
-        tlHero.fromTo(".hero", {
-            backgroundImage: `linear-gradient(90deg, ${getStyle("--primary-yellow")} 50%, ${getStyle("--primary-dark")} 50%)`
-        }, {
-            backgroundImage: `linear-gradient(45deg, ${getStyle("--primary-yellow")} 50%, ${getStyle("--primary-dark")} 50%)`,
-        }, "<")
-        
-        tlHero.fromTo(".hero .img", {
-            opacity: 0,
-            xPercent: 100
-        }, {
-            opacity: 1,
-            xPercent: 0,
-        }, "<1");
-
-        tlHero.fromTo(".hero .content > *", {
-            opacity: 0,
-            xPercent: -100
-        }, {
-            opacity: 1,
-            color: getStyle("--primary-white"),
-            xPercent: 0,
-            ease: "power4.out",
-            stagger: 0.1
-        }, "<1");
-
-        tlHero.to(".hero .content h1", {
-            textShadow: `0.1em 0.1em ${getStyle("--secondary-yellow")}`,
-        }, "<");
-
-        tlHero.to(".hero .content span", {
-            padding: ".7em",
-            backgroundImage: "linear-gradient(to bottom, red 0% 33%, white 33% 66%, blue 66% 100%)",
-            color: getStyle("--primary-dark"),
-            textShadow: `1px 1px ${getStyle("--secondary-yellow")}`
-        }, "-=1");
-
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".wrapper",
-                start: "top center",
-            }
-        });
-
-        tl.to("header", {
-            maxHeight: "75px",
-            scrollTrigger: {
-                trigger: "header",
-                start: "top top",
-                end: "bottom top",
-                scrub: 1,
-            }
-        })
-
-        tl.fromTo(".card", {
-            opacity: 0,
-            yPercent: -10
-        }, {
-            opacity: 1,
-            yPercent: 0,
-            boxShadow: `10px 10px ${getStyle("--primary-yellow")}`,
-        });
-
-        tl.fromTo(".card .skew-el", {
-            opacity: 0,
-            clipPath: "polygon(25% 0%, 100% 0%, 100% 0, 25% 0)",
-        }, {
-            opacity: 1,
-            clipPath: "polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%",
-        })
-
-        gsap.to("body", {
-            backgroundColor: getStyle("--primary-dark"),
-            scrollTrigger: {
-                trigger: ".dark",
-                start: "top bottom",
-            }
-        });
-    </script>
+        </section>
+    </div>
 </body>
 
 </html>
