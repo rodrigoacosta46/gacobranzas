@@ -10,12 +10,16 @@
     --font-family: "Oswald", sans-serif;
 
     /* Responsive font-sizes */
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
     --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
     --step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
     --step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
     --step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
     --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
     --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+    --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vw, 4.7684rem);
+    --step-7: clamp(4.0311rem, 3.36rem + 3.3555vw, 5.9605rem);
 
     /* Spacing */
     --space-3xs: clamp(0.3125rem, 0.3125rem + 0vw, 0.3125rem);
@@ -73,7 +77,7 @@ a {
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .navbar, .sections, .cascade{
@@ -242,7 +246,7 @@ section {
 
         .hero__title {
             background-color: var(--primary-dark);
-            font-size: var(--step-5);
+            font-size: var(--step-7);
         }
 
         .hero__about {
@@ -301,12 +305,13 @@ section {
     box-shadow: 5px 5px  rgba(0, 0, 0, 0.151);
 
     .card__title {
+        display: block;
         text-align: center;
         font-size: var(--step-1);
         color: var(--secondary-dark);
         
-        &::marker {
-            content: '';
+        &::-webkit-details-marker {
+            display: none;
         }
 
         &::before {
@@ -317,13 +322,13 @@ section {
     }
 
     .card__content {
-        font-size: 0px;
         margin: var(--space-s-l);
         text-align: center;
     }
 
     .card__title, .card__content {
-        transition: font-size var(--duration-md) cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all var(--duration-lg) cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition-behavior: allow-discrete;
     }
 
     &[open] > .card__title {
