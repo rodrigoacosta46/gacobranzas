@@ -76,13 +76,9 @@ a {
     text-decoration: none;
 }
 
-section {
-    min-height: 100dvh;
-}
-
 .navbar, .sections, .cascade{
     --nav-h: 90px;  /* nav height */
-    --section-h: 100vh; /* hero height */
+    --section-h: 100dvh; /* hero height */
 
     /* logo size */
     --ratio: calc(9/5);
