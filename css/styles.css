@@ -76,6 +76,10 @@ a {
     text-decoration: none;
 }
 
+section {
+    min-height: 100dvh;
+}
+
 .navbar, .sections, .cascade{
     --nav-h: 90px;  /* nav height */
     --section-h: 100dvh; /* hero height */
@@ -167,7 +171,6 @@ a {
     width: 100%;
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: var(--section-h);
     position: absolute;
     top: 0;
 
