@@ -98,7 +98,6 @@ section {
     @media (max-width: 640px) {
         --logo-w: 85px;
         --left: var(--mask-fill);
-        --top: 180px;
     }
 }
 
