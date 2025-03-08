@@ -77,12 +77,12 @@ a {
 }
 
 section {
-    min-height: 100dvh;
+    min-height: 100svh;
 }
 
 .navbar, .sections, .cascade{
     --nav-h: 90px;  /* nav height */
-    --section-h: 100dvh; /* hero height */
+    --section-h: 100svh; /* hero height */
 
     /* logo size */
     --ratio: calc(9/5);
