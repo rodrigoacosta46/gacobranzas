@@ -98,6 +98,7 @@ section {
     @media (max-width: 640px) {
         --logo-w: 85px;
         --left: var(--mask-fill);
+        --top: 180px;
     }
 }
 
@@ -246,7 +247,7 @@ section {
 
         .hero__title {
             background-color: var(--primary-dark);
-            font-size: var(--step-7);
+            font-size: var(--step-5);
         }
 
         .hero__about {
@@ -278,7 +279,8 @@ section {
         font-size: var(--step-3);
         color: var(--secondary-dark);
         text-align: end;
-        padding: var(--space-xl);
+        padding-block: var(--space-xl);
+        padding-inline: var(--space-s);
 
         z-index: 1;
     }
