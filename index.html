@@ -14,7 +14,14 @@
 
 <body>
     <header class="navbar">
+        <input type="checkbox" id="navbar__check" hidden>
+        <label for="navbar__check" class="menu">
+            <div style="--w: 100%"></div>
+            <div style="--w: 50%"></div>
+            <div style="--w: 25%"></div>
+        </label>
         <nav>
+            <label for="navbar__check" class="navbar__overlay"></label>
             <ul class="navbar__list">
                 <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
@@ -24,51 +31,75 @@
         </nav>
     </header>
     <div class="cascade">
-        <img src="imgs/logo.png" class="cascade__logo">
+        <img src="imgs/logo.png" class="cascade__logo" alt="Logo gacobranzas">
     </div>
-    <div class="sections">
-        <section class="hero">
-            <div class="hero__content">
-                <h1 class="hero__title">Cobranzas GA</h1>
-                <h2 class="hero__about">Servicios de cobranzas sin costo inicial en Paraguay</h2>
-            </div>
-        </section>
-        <section class="services">
-            <h2 class="services__title">Nuestros servicios</h2>
-            <div class="services__cards">
-                <details class="card">
-                    <summary class="card__title">Gestion Judicial y Extra Judicial</summary>
-                    <p class="card__content">
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Cobranzas GA</h1>
+            <h2 class="hero__about">Servicios de cobranzas sin costo inicial en Paraguay</h2>
+        </div>
+    </section>
+    <section class="services" aria-label="Nuestros servicios">
+        <h2 class="services__title"><span>Nuestros Servicios</span></h2>
+        <div class="services__cards">
+            <label class="card">
+                <input type="checkbox" id="check" hidden>
+                <p class="card__title">Gestion Judicial y Extra Judicial</p>
+                <div class="card__content">
+                    <p>
                         Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto
                         incluye desde la elaboración de demandas judiciales hasta la implementación de acuerdos
-                        extrajudiciales que faciliten el pago de las obligaciones pendientes. Nuestro equipo de abogados
+                        extrajudiciales que faciliten el pago de las obligaciones pendientes. Nuestro equipo de
+                        abogados
                         y gestores está altamente capacitado para manejar cada etapa del proceso, garantizando un
                         enfoque estratégico y eficiente.
                     </p>
-                </details>
-                <details class="card">
-                    <summary class="card__title">Recuperación de Pagos Pendientes
-                    </summary>
-                    <p class="card__content">
+                </div>
+            </label>
+            <label class="card">
+                <input type="checkbox" id="check" hidden>
+                <p class="card__title">Recuperación de Pagos Pendientes</p>
+                <div class="card__content">
+                    <p>
                         Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
                         gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de
-                        negociación y seguimiento, asegurando que cada gestión sea efectiva y que el dinero pendiente
+                        negociación y seguimiento, asegurando que cada gestión sea efectiva y que el dinero
+                        pendiente
                         vuelva a tus cuentas lo más pronto posible.
                     </p>
-                </details>
-                <details class="card">
-                    <summary class="card__title">Especialización en Deudas Incobrables
-                    </summary>
-                    <p class="card__content">
+                </div>
+            </label>
+            <label class="card">
+                <input type="checkbox" id="check" hidden>
+                <p class="card__title">Especialización en Deudas Incobrables</p>
+                <div class="card__content">
+                    <p>
                         No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para
-                        afrontar los desafíos más difíciles. Contamos con un equipo especializado en la recuperación de
-                        deudas consideradas incobrables, utilizando métodos y tecnologías de vanguardia para localizar y
+                        afrontar los desafíos más difíciles. Contamos con un equipo especializado en la recuperación
+                        de
+                        deudas consideradas incobrables, utilizando métodos y tecnologías de vanguardia para
+                        localizar y
                         contactar a los deudores, incrementando significativamente las posibilidades de éxito.
                     </p>
-                </details>
-            </div>
-        </section>
-    </div>
+                </div>
+            </label>
+        </div>
+    </section>
+    <section class="feature">
+        <input type="checkbox" id="feature__check" hidden>
+        <label for="feature__check" class="feature__title">
+            <h2>¿Por qué elegirnos?</h2>
+        </label>
+        <p class="feature__content">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at aut perferendis hic nisi similique
+            ducimus nulla quae perspiciatis soluta voluptatibus, repellendus ratione voluptatem! Totam explicabo optio
+            consequatur neque. Libero.
+            Magnam accusantium illum cum animi eos non unde beatae, voluptate officiis quasi pariatur soluta facilis
+            vero consequuntur ab optio tempore, totam et quam ullam exercitationem praesentium tempora eveniet. Eveniet,
+            perspiciatis.
+        </p>
+    </section>
+
 </body>
 
 </html>
