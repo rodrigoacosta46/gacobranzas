@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/imgs/icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/imgs/icon/favicon.svg" />
+    <link rel="shortcut icon" href="/imgs/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/imgs/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/imgs/icon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
@@ -23,27 +28,27 @@
         <nav>
             <label for="navbar__check" class="navbar__overlay"></label>
             <ul class="navbar__list">
-                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="#">lorem</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#home">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#services">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#about">Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#contact">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
     <div class="cascade">
         <img src="imgs/logo.png" class="cascade__logo" alt="Logo gacobranzas">
     </div>
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero__content">
             <h1 class="hero__title">Cobranzas GA</h1>
             <h2 class="hero__about">Servicios de cobranzas sin costo inicial en Paraguay</h2>
         </div>
     </section>
-    <section class="services" aria-label="Nuestros servicios">
-        <h2 class="services__title"><span>Nuestros Servicios</span></h2>
+    <section class="services" aria-label="Nuestros servicios" id="services">
+        <h2 class="services__title title"><span>Nuestros Servicios</span></h2>
         <div class="services__cards">
-            <label class="card">
-                <input type="checkbox" id="check" hidden>
+            <label class="card" role="button" tabindex="0" aria-label="toggle menu" aria-expanded="false">
+                <input type="checkbox" class="card__check" hidden>
                 <p class="card__title">Gestion Judicial y Extra Judicial</p>
                 <div class="card__content">
                     <p>
@@ -57,7 +62,7 @@
                 </div>
             </label>
             <label class="card">
-                <input type="checkbox" id="check" hidden>
+                <input type="checkbox" class="card__check" hidden>
                 <p class="card__title">Recuperación de Pagos Pendientes</p>
                 <div class="card__content">
                     <p>
@@ -70,7 +75,7 @@
                 </div>
             </label>
             <label class="card">
-                <input type="checkbox" id="check" hidden>
+                <input type="checkbox" class="card__check" hidden>
                 <p class="card__title">Especialización en Deudas Incobrables</p>
                 <div class="card__content">
                     <p>
@@ -85,21 +90,75 @@
             </label>
         </div>
     </section>
-    <section class="feature">
-        <input type="checkbox" id="feature__check" hidden>
-        <label for="feature__check" class="feature__title">
-            <h2>¿Por qué elegirnos?</h2>
-        </label>
-        <p class="feature__content">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid at aut perferendis hic nisi similique
-            ducimus nulla quae perspiciatis soluta voluptatibus, repellendus ratione voluptatem! Totam explicabo optio
-            consequatur neque. Libero.
-            Magnam accusantium illum cum animi eos non unde beatae, voluptate officiis quasi pariatur soluta facilis
-            vero consequuntur ab optio tempore, totam et quam ullam exercitationem praesentium tempora eveniet. Eveniet,
-            perspiciatis.
-        </p>
+    <section class="feature expandable" id="about">
+        <details class="expand">
+            <summary>
+                <h2 role="term" aria-details="bezier">¿Por qué elegirnos?</h2>
+            </summary>
+        </details>
+        <div class="collapse" role="definition" id="bezier">
+            <div class="feature__content">
+                <p style="--delay: 1">
+                    Nuestros servicios no tienen costo inicial.<span class="feature__highlight"> Solo cobramos en función
+                    de
+                    nuestra productividad</span>, asegurando que nuestros intereses estén alineados con los tuyos.
+                    Esto
+                    significa que solo pagas cuando logramos
+                    resultados, lo que demuestra nuestro compromiso con la eficiencia y el éxito.
+                </p>
+                <img src="imgs/carousel/0.jpg" alt="" loading="lazy" style="--delay: 2">
+            </div>
+        </div>
     </section>
+    <section class="clients">
+        <h2 class="clients__title title">Nuestros clientes</h2>
+        <div class="slider" style="--slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        </div>
+        <div class="slider slider--transform start" style="--slider-rotate: 45deg; --slider-depth: 0.8; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        </div>
+        <div class="slider slider--transform" style="--slider-rotate: 45deg; --slider-depth: 0.5; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        </div>
+        <div class="slider slider--transform end" style="--slider-rotate: 45deg; --slider-depth: 0.6; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact__content">
+            <h2 class="contact__title title">Contáctanos</h2>
+            Recibiremos un correo de tu parte y nos pondremos en contacto contigo, solo llena el siguiente formulario
+            con los datos correspondientes:
+        </div>
+        <form class="contact__form">
+            <label>
+                Nombre
+                <input type="text" name="name">
+            </label>
+            <label>
+                Correo
+                <input type="email" name="email">
+            </label>
+            <label>
+                Teléfono
+                <input type="text" name="cel">
+            </label>
+            <label>
+                Asunto
+                <select name="type" required>
+                    <option value="Propuesta de Trabajo" selected="true">Propuesta de empleo</option>
+                    <option value="Busco Servicio">Busco servicio</option>
+                    <option value="Otra Propuesta">Otros</option>
+                </select>
+            </label>
+            <textarea name="message" rows="12" cols="30" minlength="20" placeholder="Cuerpo del correo" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    <footer>
 
+    </footer>
 </body>
 
 </html>
