@@ -45,12 +45,14 @@
         </div>
     </section>
     <section class="services" aria-label="Nuestros servicios" id="services">
-        <h2 class="services__title title"><span>Nuestros Servicios</span></h2>
+        <h2 class="services__title title text-fadein"><span>Nuestros Servicios</span></h2>
         <div class="services__cards">
-            <label class="card" role="button" tabindex="0" aria-label="toggle menu" aria-expanded="false">
-                <input type="checkbox" class="card__check" hidden>
-                <p class="card__title">Gestion Judicial y Extra Judicial</p>
-                <div class="card__content">
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title" role="term" aria-details="bezier-card--1">Gestion Judicial y Extra
+                        Judicial</summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--1">
                     <p>
                         Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto
                         incluye desde la elaboración de demandas judiciales hasta la implementación de acuerdos
@@ -60,11 +62,13 @@
                         enfoque estratégico y eficiente.
                     </p>
                 </div>
-            </label>
-            <label class="card">
-                <input type="checkbox" class="card__check" hidden>
-                <p class="card__title">Recuperación de Pagos Pendientes</p>
-                <div class="card__content">
+            </div>
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title" role="term" aria-details="bezier-card--2">Recuperación de Pagos
+                        Pendientes</summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--2">
                     <p>
                         Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
                         gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de
@@ -73,11 +77,13 @@
                         vuelva a tus cuentas lo más pronto posible.
                     </p>
                 </div>
-            </label>
-            <label class="card">
-                <input type="checkbox" class="card__check" hidden>
-                <p class="card__title">Especialización en Deudas Incobrables</p>
-                <div class="card__content">
+            </div>
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title" role="term" aria-details="bezier-card--3">Especialización en Deudas
+                        Incobrables</summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--3">
                     <p>
                         No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para
                         afrontar los desafíos más difíciles. Contamos con un equipo especializado en la recuperación
@@ -87,21 +93,22 @@
                         contactar a los deudores, incrementando significativamente las posibilidades de éxito.
                     </p>
                 </div>
-            </label>
+            </div>
         </div>
     </section>
     <section class="feature expandable" id="about">
         <details class="expand">
             <summary>
-                <h2 role="term" aria-details="bezier">¿Por qué elegirnos?</h2>
+                <h2 role="term" aria-details="bezier-feature">¿Por qué elegirnos?</h2>
             </summary>
         </details>
-        <div class="collapse" role="definition" id="bezier">
+        <div class="collapse" role="definition" id="bezier-feature">
             <div class="feature__content">
                 <p style="--delay: 1">
-                    Nuestros servicios no tienen costo inicial.<span class="feature__highlight"> Solo cobramos en función
-                    de
-                    nuestra productividad</span>, asegurando que nuestros intereses estén alineados con los tuyos.
+                    Nuestros servicios no tienen costo inicial.<span class="feature__highlight"> Solo cobramos en
+                        función
+                        de
+                        nuestra productividad</span>, asegurando que nuestros intereses estén alineados con los tuyos.
                     Esto
                     significa que solo pagas cuando logramos
                     resultados, lo que demuestra nuestro compromiso con la eficiencia y el éxito.
@@ -111,27 +118,83 @@
         </div>
     </section>
     <section class="clients">
-        <h2 class="clients__title title">Nuestros clientes</h2>
-        <div class="slider" style="--slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
-            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        <h2 class="clients__title title text-fadein">Nuestros clientes</h2>
+        <div class="slider">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="slider__item">
+            <img src="imgs/empresas/7.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="imgs/empresas/8.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="imgs/empresas/9.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="imgs/empresas/10.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="imgs/empresas/11.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="imgs/empresas/12.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="imgs/empresas/13.png" alt="cliente" style="--slider-pos:14" class="slider__item">
         </div>
-        <div class="slider slider--transform start" style="--slider-rotate: 45deg; --slider-depth: 0.8; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
-            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        <div class="slider slider--transform start" style="--slider-depth: 0.8;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="imgs/empresas/7.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="imgs/empresas/8.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="imgs/empresas/9.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="imgs/empresas/10.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="imgs/empresas/11.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="imgs/empresas/12.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="imgs/empresas/13.png" alt="cliente" style="--slider-pos:14" class="slider__item">
         </div>
-        <div class="slider slider--transform" style="--slider-rotate: 45deg; --slider-depth: 0.5; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
-            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        <div class="slider slider--west slider--transform" style="--slider-depth: 0.55;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="imgs/empresas/7.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="imgs/empresas/8.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="imgs/empresas/9.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="imgs/empresas/10.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="imgs/empresas/11.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="imgs/empresas/12.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="imgs/empresas/13.png" alt="cliente" style="--slider-pos:14" class="slider__item">
         </div>
-        <div class="slider slider--transform end" style="--slider-rotate: 45deg; --slider-depth: 0.6; --slides-w: clamp(240px, 14vw, 340px); --slider-h: 150px; --slider-time: 10s; --slider-items: 7;">
-            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="cli"><img src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="cli"><img src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="cli"><img src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="cli"><img src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="cli"><img src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="cli"><img src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="cli">
+        <div class="slider slider--transform end" style="--slider-depth: 0.6;">
+            <img src="imgs/empresas/0.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="imgs/empresas/1.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="imgs/empresas/2.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="imgs/empresas/3.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="imgs/empresas/4.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="imgs/empresas/5.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="imgs/empresas/6.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="imgs/empresas/7.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="imgs/empresas/8.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="imgs/empresas/9.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="imgs/empresas/10.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="imgs/empresas/11.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="imgs/empresas/12.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="imgs/empresas/13.png" alt="cliente" style="--slider-pos:14" class="slider__item">
         </div>
     </section>
-    <section class="contact" id="contact">
-        <div class="contact__content">
-            <h2 class="contact__title title">Contáctanos</h2>
-            Recibiremos un correo de tu parte y nos pondremos en contacto contigo, solo llena el siguiente formulario
-            con los datos correspondientes:
+    <footer class="contact" id="contact">
+        <div class="contact__content text-fadein" style="--per: 75%">
+            <p class="title">Número</p>
+            +595 972 883 736
+            <p class="title">Ubicación</p>
+            San Lorenzo, Paraguay
+            <p class="title">Correo</p>
+            fenixcobranzas123@gmail.com
         </div>
         <form class="contact__form">
+            <h2 class="contact__title title text-fadein">Contáctanos</h2>
             <label>
                 Nombre
                 <input type="text" name="name">
@@ -141,10 +204,6 @@
                 <input type="email" name="email">
             </label>
             <label>
-                Teléfono
-                <input type="text" name="cel">
-            </label>
-            <label>
                 Asunto
                 <select name="type" required>
                     <option value="Propuesta de Trabajo" selected="true">Propuesta de empleo</option>
@@ -152,12 +211,11 @@
                     <option value="Otra Propuesta">Otros</option>
                 </select>
             </label>
-            <textarea name="message" rows="12" cols="30" minlength="20" placeholder="Cuerpo del correo" required></textarea>
+            <textarea name="message" rows="10" cols="30" minlength="20" placeholder="Cuerpo del correo"
+                required></textarea>
             <input type="submit" value="Enviar">
+            <span class="blanket" aria-hidden="true"></span>
         </form>
-    </section>
-    <footer>
-
     </footer>
 </body>
 
