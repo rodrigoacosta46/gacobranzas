@@ -198,15 +198,15 @@
             <p class="title">Correo</p>
             fenixcobranzas123@gmail.com
         </div>
-        <form class="contact__form">
+        <form action="https://formspree.io/f/mrbkanbz" method="POST" class="contact__form" id="contact__form">
             <h2 class="contact__title title text-fadein">Contáctanos</h2>
             <label>
                 Nombre
-                <input type="text" name="name">
+                <input type="text" name="name" required>
             </label>
             <label>
                 Correo
-                <input type="email" name="email">
+                <input type="email" name="email" required>
             </label>
             <label>
                 Asunto
@@ -218,6 +218,7 @@
             </label>
             <textarea name="message" rows="10" cols="30" minlength="20" placeholder="Cuerpo del correo"
                 required></textarea>
+            <input type="text" name="_gotcha" />
             <input type="submit" value="Enviar">
             <span class="blanket" aria-hidden="true"></span>
         </form>

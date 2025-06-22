@@ -615,6 +615,10 @@ body > * {
             width: 100%;
         }
 
+        input[name="_gotcha"] {
+            display: none;
+        }
+
         input[type="submit"] {
             width: 100%;
             align-self: end;
@@ -834,7 +838,7 @@ body > * {
     transform: rotate(-90deg);
     position: absolute;
     top: calc(-100svh - 1px + var(--h-offset) / 2); /* al modificar el width (altura), incrementa para arriba y para abajo */
-    left: 50vw;
+    left: 50svw;
     pointer-events: none;
 
     z-index: -1;
