@@ -1,14 +1,14 @@
-:root {    
+:root {
     scroll-behavior: smooth;
 
     /* Colors */
-    color-scheme: light dark;
-    --primary-dark: #050505;
-    --secondary-dark: #252424;
-    --primary-yellow: #efb92d;
-    --secondary-yellow: #dba445;
-    --primary-light: #ffffff;
-    --tertiary-dark: rgba(0, 0, 0, 0.151);
+    color-scheme: light only !important;
+    --primary-dark: #050505 !important;
+    --secondary-dark: #252424 !important;
+    --primary-yellow: #efb92d !important;
+    --secondary-yellow: #dba445 !important;
+    --primary-light: #ffffff !important;
+    --tertiary-dark: rgba(0, 0, 0, 0.151) !important;
 
     /* Font Family */
     --font-family: "Oswald", sans-serif;
@@ -53,21 +53,11 @@
 
     /* Transitions */
     --transition-overshoots: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    --transition-easeout: cubic-bezier(0.215, 0.610, 0.355, 1);
-    --duration-sm: .5s;
-    --duration-md: .7s;
-    --duration-lg: 1s;  
-
-    @media (prefers-color-scheme: dark) {
-        --primary-dark: #050505;
-        --secondary-dark: #252424;
-        --primary-yellow: #efb92d;
-        --secondary-yellow: #dba445;
-        --primary-light: #ffffff;
-        --tertiary-dark: rgba(0, 0, 0, 0.151);
-    }
+    --transition-easeout: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --duration-sm: 0.5s;
+    --duration-md: 0.7s;
+    --duration-lg: 1s;
 }
-
 
 body {
     font-family: var(--font-family);
@@ -90,21 +80,24 @@ a {
     text-decoration: none;
 }
 
-section, footer{
+section,
+footer {
     min-height: 100svh;
     scroll-snap-align: start;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     font-family: var(--font-family);
 }
 
-body > * {
+body>* {
     --nav-h: 80px;
     --section-h: 100svh;
 
     /* logo size */
-    --ratio: calc(9/5);
+    --ratio: calc(9 / 5);
     --logo-w: 90px;
     --logo-h: calc(var(--logo-w) / var(--ratio));
 
@@ -115,12 +108,12 @@ body > * {
     --mask-fill: var(--space-m);
     --mask-pos-y: calc(var(--top) - var(--mask-fill) + var(--nav-h));
     --mask-pos-x: calc(var(--left) - var(--mask-fill));
-        
+
     /* mask rect styles */
     --outline: 7px;
     --bg-s: calc(100% - var(--outline));
     --after-w: calc(var(--outline) * 4);
- 
+
     @media (max-width: 768px) {
         --mask-fill: var(--space-s);
         --bottom: 260px;
@@ -137,16 +130,17 @@ body > * {
     background-color: transparent;
     position: sticky;
     top: 0;
-    opacity: .1;
+    opacity: 0.1;
     transition: opacity 1s;
-    
+
     z-index: 2;
 
     &:hover {
         opacity: 1;
     }
 
-    .menu, .navbar__overlay {
+    .menu,
+    .navbar__overlay {
         display: none;
     }
 
@@ -158,7 +152,8 @@ body > * {
         color: var(--secondary-dark);
     }
 
-    .navbar__item, .menu {
+    .navbar__item,
+    .menu {
         font-size: var(--step-0);
         padding-inline: var(--space-s);
         align-content: center;
@@ -190,8 +185,7 @@ body > * {
     }
 
     @media (max-width: 1024px) {
-    
-    opacity: .7;
+        opacity: 0.7;
 
         .menu {
             display: flex;
@@ -208,17 +202,18 @@ body > * {
                 background-color: var(--secondary-dark);
                 transition: width var(--duration-sm) var(--transition-easeout);
             }
-            
+
             &:hover div {
                 width: var(--w);
             }
         }
 
-        .navbar__list, .navbar__overlay {
+        .navbar__list,
+        .navbar__overlay {
             overflow: hidden;
             position: fixed;
             right: 0;
-            height: 100%;
+            height: 100svh;
             width: 0%;
             opacity: 0;
             transition-property: width, opacity;
@@ -239,12 +234,12 @@ body > * {
             padding-block: var(--space-xl);
         }
 
-        #navbar__check:checked + .menu + nav .navbar__overlay {
+        #navbar__check:checked+.menu+nav .navbar__overlay {
             width: 100%;
             opacity: 1;
         }
-        
-        #navbar__check:checked + .menu + nav .navbar__list {
+
+        #navbar__check:checked+.menu+nav .navbar__list {
             width: 30%;
             opacity: 1;
         }
@@ -259,7 +254,7 @@ body > * {
     z-index: 1;
 
     &::before {
-        content: '';
+        content: "";
         display: block;
         position: sticky;
         top: 0;
@@ -267,9 +262,10 @@ body > * {
         height: var(--logo-h);
         border-radius: 50%;
         padding: var(--mask-fill);
-        background:
-            conic-gradient(var(--primary-yellow) 0 0) 50% 50% / calc(var(--after-w) - var(--outline) * 2) calc(100% + 1px) no-repeat,
-            radial-gradient(farthest-side, var(--primary-yellow) var(--bg-s), var(--primary-light) var(--bg-s) var(--outline));
+        background: conic-gradient(var(--primary-yellow) 0 0) 50% 50% / calc(var(--after-w) - var(--outline) * 2) calc(100% + 1px) no-repeat,
+            radial-gradient(farthest-side,
+                var(--primary-yellow) var(--bg-s),
+                var(--primary-light) var(--bg-s) var(--outline));
         margin-block-start: var(--mask-pos-y);
         margin-inline-start: var(--mask-pos-x);
         margin-block-end: 15px;
@@ -283,13 +279,10 @@ body > * {
         display: block;
         width: var(--after-w);
         height: 100%;
-        background: 
-            linear-gradient(
-                90deg, 
-                var(--primary-light) var(--outline), 
-                transparent var(--outline) var(--bg-s), 
-                var(--primary-light) var(--bg-s) var(--outline)) 
-                0 0 / var(--after-w) 100% no-repeat;
+        background: linear-gradient(90deg,
+                var(--primary-light) var(--outline),
+                transparent var(--outline) var(--bg-s),
+                var(--primary-light) var(--bg-s) var(--outline)) 0 0 / var(--after-w) 100% no-repeat;
         position: absolute;
         top: 0;
         z-index: -1;
@@ -300,13 +293,13 @@ body > * {
     .hero__content {
         /* Title size */
         --t-size: calc(var(--mask-pos-y) + ((var(--logo-h) + var(--mask-fill) * 2) / 2));
-        
+
         /* subtitle size */
         --s-size: calc(var(--section-h) - var(--t-size));
-        
+
         /* overlap logo section */
         --overlap: calc((var(--logo-w) + (var(--mask-fill) * 2) - var(--after-w)) / -2);
-        
+
         flex: 1;
         display: grid;
         grid-auto-flow: row;
@@ -316,7 +309,7 @@ body > * {
         justify-items: stretch;
         margin-inline-start: var(--overlap);
 
-        & > * {
+        &>* {
             align-content: center;
             text-align: end;
             color: var(--primary-light);
@@ -340,10 +333,14 @@ body > * {
                 --x-outline: calc(30% + var(--s) * 8);
                 --deg-outline: calc(30% - var(--s));
 
-                content: '';
-                background:
-                    linear-gradient(90deg, transparent var(--x-outline), var(--primary-light) var(--x-outline) 100%) 0% 100% / 100% var(--s) no-repeat,
-                    linear-gradient(65deg, transparent var(--deg-outline), var(--primary-light) var(--deg-outline) 30%, var(--secondary-yellow) 30% 100%);
+                content: "";
+                background: linear-gradient(90deg,
+                        transparent var(--x-outline),
+                        var(--primary-light) var(--x-outline) 100%) 0% 100% / 100% var(--s) no-repeat,
+                    linear-gradient(65deg,
+                        transparent var(--deg-outline),
+                        var(--primary-light) var(--deg-outline) 30%,
+                        var(--secondary-yellow) 30% 100%);
                 position: absolute;
                 width: min(700px, calc(100% + var(--outline)));
                 height: 70%;
@@ -382,38 +379,37 @@ body > * {
     &::before {
         --right: 80px;
 
-        content: '';
+        content: "";
         position: absolute;
         top: 80px;
         right: calc(var(--right) + var(--after-w));
         width: calc(50% - var(--after-w) / 2 - var(--right));
         height: 150%;
-        box-shadow: 
-            calc(-1*var(--after-w)) 0 0 var(--primary-yellow) inset,
-            0 calc(-1*var(--after-w)) 0 var(--primary-yellow) inset,
-            0 0 0 var(--outline) var(--primary-light) inset, 
+        box-shadow: calc(-1 * var(--after-w)) 0 0 var(--primary-yellow) inset,
+            0 calc(-1 * var(--after-w)) 0 var(--primary-yellow) inset,
+            0 0 0 var(--outline) var(--primary-light) inset,
             0 0 0 calc(var(--after-w) - var(--outline)) var(--primary-yellow) inset,
             0 0 0 var(--after-w) var(--primary-light) inset;
     }
 }
 
-.feature {       
+.feature {
     padding-top: var(--nav-h);
     mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
 
     .feature__content {
         display: flex;
         padding: var(--space-xs);
-    
-        p, img {
+
+        p,
+        img {
             flex: 1;
             max-width: 50%;
             transform: translateY(100%);
             opacity: 0;
 
-            transition: 
-            transform .2s var(--transition-easeout), 
-            opacity .2s var(--transition-easeout);
+            transition: transform 0.2s var(--transition-easeout),
+                opacity 0.2s var(--transition-easeout);
         }
 
         p {
@@ -429,7 +425,8 @@ body > * {
         background-size: 0% 100%;
         background-position: left bottom;
 
-        transition: background-size 4s var(--transition-easeout), color 4s var(--transition-easeout);
+        transition: background-size 4s var(--transition-easeout),
+            color 4s var(--transition-easeout);
     }
 
     @media (max-width: 720px) {
@@ -448,19 +445,18 @@ body > * {
 }
 
 .feature.expandable {
-    --delay-time: .2s;
+    --delay-time: 0.2s;
 
-    .expand[open] + .collapse > .feature__content>:where(p, img) {
+    .expand[open]+.collapse>.feature__content> :where(p, img) {
         transform: translateY(0%);
         opacity: 1;
-        
-        transition: 
-        transform .7s var(--transition-easeout), 
-        opacity .7s var(--transition-easeout);
+
+        transition: transform 0.7s var(--transition-easeout),
+            opacity 0.7s var(--transition-easeout);
         transition-delay: calc(var(--delay-time) * var(--delay));
     }
 
-    .expand[open] + .collapse .feature__highlight {
+    .expand[open]+.collapse .feature__highlight {
         background-size: 100% 100%;
         color: var(--primary-light);
     }
@@ -474,7 +470,7 @@ body > * {
     justify-content: center;
     gap: var(--space-m);
     background-color: var(--primary-dark);
-    
+
     overflow: visible;
     z-index: 1;
 
@@ -483,7 +479,11 @@ body > * {
         --slider-time: 15s;
 
         background-color: var(--primary-light);
-        mask-image: linear-gradient(to right, transparent 0%, black 10%, black 80%, transparent 100%);
+        mask-image: linear-gradient(to right,
+                transparent 0%,
+                black 10%,
+                black 80%,
+                transparent 100%);
         padding-block: var(--space-xs);
     }
 
@@ -502,7 +502,7 @@ body > * {
         left: 23.33%;
     }
 
-    &:has(>.slider:hover) > .slider > .slider__item {
+    &:has(> .slider:hover)>.slider>.slider__item {
         animation-play-state: paused;
     }
 
@@ -510,8 +510,8 @@ body > * {
         .slider {
             --slider-h: 100px;
             --slider-rotate: 90deg;
-            
-            &.slider--transform:not(.start,.end) {
+
+            &.slider--transform:not(.start, .end) {
                 --slider-depth: 1.4 !important;
             }
         }
@@ -519,24 +519,23 @@ body > * {
         .slider--transform {
             opacity: 0.1;
         }
+
         .start {
             top: -5%;
             right: 33.33%;
         }
-    
+
         .end {
             left: 33.33%;
         }
-
     }
 }
-
 
 .contact {
     display: flex;
     flex-wrap: wrap-reverse;
 
-    & > * {
+    &>* {
         flex: 1;
     }
 
@@ -544,11 +543,11 @@ body > * {
         min-height: 100%;
         background-color: var(--primary-dark);
         text-align: center;
-        position: relative;    
+        position: relative;
         padding-block-end: var(--space-3xl);
         color: var(--tertiary-dark);
         font-size: var(--step-0);
-        
+
         p {
             font-weight: lighter;
             margin-block-start: var(--space-3xs-2xl);
@@ -581,16 +580,19 @@ body > * {
         min-height: 100%;
         font-size: var(--step-1);
         overflow: clip;
-        
+
         z-index: 0;
-        
-        input, textarea, select {
+
+        input,
+        textarea,
+        select {
             font-size: var(--step-0);
             border: none;
-            transition: background-color .7s var(--transition-overshoots), color .7s var(--transition-easeout);
+            transition: background-color 0.7s var(--transition-overshoots),
+                color 0.7s var(--transition-easeout);
             outline: none;
 
-            &:focus{
+            &:focus {
                 color: var(--primary-light);
                 background-color: var(--secondary-yellow);
             }
@@ -600,7 +602,7 @@ body > * {
             display: flex;
             flex-direction: column;
             gap: 2px;
-            transition: color .2s var(--transition-easeout);
+            transition: color 0.2s var(--transition-easeout);
 
             &:has(input:focus, select:focus) {
                 color: var(--secondary-dark);
@@ -610,9 +612,10 @@ body > * {
                 color: var(--secondary-dark);
             }
         }
-        
+
         textarea {
             width: 100%;
+            resize: none;
         }
 
         input[name="_gotcha"] {
@@ -644,12 +647,13 @@ body > * {
 .text-fadein {
     --per: 30%;
 
-    color: transparent;
-    background-image: linear-gradient(var(--primary-light) var(--per), var(--secondary-dark) 90%);
-    background-repeat: no-repeat;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-attachment: fixed;
+    color: transparent !important;
+    background-image: linear-gradient(var(--primary-light) var(--per),
+            var(--secondary-dark) 90%) !important;
+    background-repeat: no-repeat !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    background-attachment: fixed !important;
 }
 
 .cascade {
@@ -693,7 +697,7 @@ body > * {
             content: "";
             position: absolute;
             inset: 0;
-            pointer-events: auto;   
+            pointer-events: auto;
         }
     }
 
@@ -713,12 +717,12 @@ body > * {
         transition: font-size var(--t), color var(--t);
     }
 
-    .card__check[open] > .card__title{
+    .card__check[open]>.card__title {
         font-size: var(--step-1);
         color: var(--primary-yellow);
     }
 
-    .card__check[open] + .card__content{
+    .card__check[open]+.card__content {
         font-size: var(--step-0);
     }
 
@@ -735,20 +739,20 @@ body > * {
     position: relative;
     display: grid;
     grid-template-rows: calc(50% - var(--collapse) - var(--nav-h)) 1fr 0%;
-    transition: grid-template-rows .5s, background-color .5s;
-    
-    &:has(>.expand[open]) {
+    transition: grid-template-rows 0.5s, background-color 0.5s;
+
+    &:has(> .expand[open]) {
         grid-template-rows: calc(0%) 0fr 100%;
         background-color: var(--expandable-color-open, var(--primary-dark));
     }
-    
+
     .expand {
         grid-row: 2;
         place-self: start center;
         width: fit-content;
         background-color: var(--expandable-color, var(--primary-light));
-        border-radius: .7rem;
-        transition: background-color .7s, color .7s, font-size .7s;
+        border-radius: 0.7rem;
+        transition: background-color 0.7s, color 0.7s, font-size 0.7s;
         font-size: var(--summary);
         color: var(--expandable-txt, var(--secondary-dark));
 
@@ -757,7 +761,7 @@ body > * {
             padding: var(--sum-padding);
             cursor: pointer;
         }
-    
+
         &[open] {
             background-color: var(--expandable-color-open, var(--primary-dark));
             color: var(--expandable-txt-open, var(--primary-light));
@@ -773,14 +777,14 @@ body > * {
 
 .slider {
     /*https://codepen.io/EntropyReversed/pen/LYoLMqE*/
-    
+
     /* Default config */
-    --slider-w: clamp(240px, 14vw, 340px); 
-    --slider-h: 150px; 
-    --slider-time: 10s; 
+    --slider-w: clamp(240px, 14vw, 340px);
+    --slider-h: 150px;
+    --slider-time: 10s;
     --slider-items: 7;
     --slider-rotate: 45deg;
-    --slider-depth: 1; 
+    --slider-depth: 1;
     --dir: 1;
 
     width: 100%;
@@ -795,25 +799,25 @@ body > * {
         height: var(--slider-h);
         object-fit: scale-down;
         flex-shrink: 0;
-        position:absolute;
+        position: absolute;
         right: 100%;
 
-        transition: filter .7s var(--transition-easeout);
+        transition: filter 0.7s var(--transition-easeout);
 
         animation: slide var(--slider-time) linear infinite;
-        animation-delay: calc( (var(--slider-time) / var(--slider-items)) * (var(--slider-items) - var(--slider-pos)) * var(--dir));
+        animation-delay: calc((var(--slider-time) / var(--slider-items)) * (var(--slider-items) - var(--slider-pos)) * var(--dir));
         animation-play-state: var(--state);
 
-        &:has(~&:hover),
-        &:hover ~&{
+        &:has(~ &:hover),
+        &:hover~& {
             filter: grayscale(1);
         }
     }
 
-    &.slider--west > .slider__item {
+    &.slider--west>.slider__item {
         --dir: -1;
 
-        left: 100%
+        left: 100%;
     }
 
     &.slider--transform {
@@ -828,31 +832,32 @@ body > * {
 }
 
 .blanket {
-    /* El width del blanket es la altura, y la altura el width */
-    /* Al estar rotado, siempre va a sobresalir de su contenedor */
-    
-    --h-offset: 106.77px; /* la altura maxima del padre es de 626.77px */
-
-    width: calc(100svh + var(--h-offset));
-    height: 300svh; 
-    transform: rotate(-90deg);
     position: absolute;
-    top: calc(-100svh - 1px + var(--h-offset) / 2); /* al modificar el width (altura), incrementa para arriba y para abajo */
-    left: 50svw;
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 400%;
 
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-99%);
+
+    pointer-events: none;
     z-index: -1;
 
     &::before {
+        --g: 5%;
         content: "";
         display: block;
         height: 50%;
         position: sticky;
-        top: 0;
-        background: linear-gradient(to bottom, transparent 0%, var(--primary-dark) 5%);
-    }
+        top: 105%;
+        background: linear-gradient(to bottom,
+                transparent 0%,
+                var(--primary-dark) var(--g));
 
-    @media (max-width: 600px) {
-        left: 100vw;
+        @media (max-width: 600px) {
+            --g: 2%;
+            top: 50%;
+        }
     }
 }
