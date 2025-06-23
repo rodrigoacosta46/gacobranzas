@@ -2,13 +2,13 @@
     scroll-behavior: smooth;
 
     /* Colors */
-    color-scheme: light only !important;
-    --primary-dark: #050505 !important;
-    --secondary-dark: #252424 !important;
-    --primary-yellow: #efb92d !important;
-    --secondary-yellow: #dba445 !important;
-    --primary-light: #ffffff !important;
-    --tertiary-dark: rgba(0, 0, 0, 0.151) !important;
+    color-scheme: light only;
+    --primary-dark: #050505;
+    --secondary-dark: #252424;
+    --primary-yellow: #efb92d;
+    --secondary-yellow: #dba445;
+    --primary-light: #ffffff;
+    --tertiary-dark: rgba(0, 0, 0, 0.151);
 
     /* Font Family */
     --font-family: "Oswald", sans-serif;
@@ -213,7 +213,7 @@ body>* {
             overflow: hidden;
             position: fixed;
             right: 0;
-            height: 100svh;
+            height: 100%;
             width: 0%;
             opacity: 0;
             transition-property: width, opacity;
@@ -536,7 +536,7 @@ body>* {
     flex-wrap: wrap-reverse;
 
     &>* {
-        flex: 1;
+        flex: 1 1 250px;
     }
 
     .contact__content {
@@ -647,13 +647,13 @@ body>* {
 .text-fadein {
     --per: 30%;
 
-    color: transparent !important;
+    color: transparent;
     background-image: linear-gradient(var(--primary-light) var(--per),
-            var(--secondary-dark) 90%) !important;
-    background-repeat: no-repeat !important;
-    background-clip: text !important;
-    -webkit-background-clip: text !important;
-    background-attachment: fixed !important;
+            var(--secondary-dark) 90%);
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-attachment: fixed;
 }
 
 .cascade {

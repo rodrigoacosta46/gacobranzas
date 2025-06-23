@@ -1,16 +1,18 @@
 const items = document.querySelectorAll(".card__check, .expand");
-const menu = document.querySelector("#navbar__check");
+const menu = document.querySelector(".navbar");
 
-const observer = new IntersectionObserver(entries => {
+
+const observer = new IntersectionObserver((entries, obs)=> {
     entries.forEach(entry => {
-        if(entry.isIntersecting && !menu.checked) {
+        if(entry.isIntersecting && !menu.querySelector("#navbar__check").checked) {
             entry.target.open = true;
+            obs.unobserve(entry.target);
             //entry.target.open = !entry.target.open;
         }
     })
 }, {
     thereshold: 1,
-    rootMargin: "-40%"
+    rootMargin: "-50%"
 });
 
 items.forEach(i => {
