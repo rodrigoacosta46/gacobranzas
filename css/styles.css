@@ -384,7 +384,7 @@ body>* {
         top: 80px;
         right: calc(var(--right) + var(--after-w));
         width: calc(50% - var(--after-w) / 2 - var(--right));
-        height: 150%;
+        height: 100%;
         box-shadow: calc(-1 * var(--after-w)) 0 0 var(--primary-yellow) inset,
             0 calc(-1 * var(--after-w)) 0 var(--primary-yellow) inset,
             0 0 0 var(--outline) var(--primary-light) inset,
@@ -394,8 +394,11 @@ body>* {
 }
 
 .feature {
+    mask-image: linear-gradient(transparent 0%, black 10%);
     padding-top: var(--nav-h);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 100%);
+    position: relative;
+    mask-size: 100% 200%;
+    mask-position: 0% 100%;
 
     .feature__content {
         display: flex;
@@ -429,6 +432,28 @@ body>* {
             color 4s var(--transition-easeout);
     }
 
+    &::before {
+        --o: var(--outline);
+
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - var(--after-w) / 2);
+        width: var(--after-w);
+        height: calc(50% - var(--nav-h));
+        background-image: 
+            linear-gradient(to right,
+                var(--primary-light) 0% var(--o), 
+                transparent var(--o) var(--bg-s),
+                var(--primary-light) var(--bg-s) 100%);
+
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transition: opacity .7s var(--transition-easeout), clip-path .2s linear;
+
+        z-index: -1;
+    }
+
     @media (max-width: 720px) {
         text-align: center;
 
@@ -447,18 +472,29 @@ body>* {
 .feature.expandable {
     --delay-time: 0.2s;
 
-    .expand[open]+.collapse>.feature__content> :where(p, img) {
-        transform: translateY(0%);
-        opacity: 1;
+    &:has(.expand[open]){
+        mask-position: 0% 0%;
 
-        transition: transform 0.7s var(--transition-easeout),
-            opacity 0.7s var(--transition-easeout);
-        transition-delay: calc(var(--delay-time) * var(--delay));
+        &::before {
+            clip-path: inset(0 0 50% 0);
+            opacity: 0.5;
+        }
     }
+    .expand[open] {
+        
+        &+.collapse>.feature__content> :where(p, img) {
+            transform: translateY(0%);
+            opacity: 1;
+    
+            transition: transform 0.7s var(--transition-easeout),
+                opacity 0.7s var(--transition-easeout);
+            transition-delay: calc(var(--delay-time) * var(--delay));
+        }
 
-    .expand[open]+.collapse .feature__highlight {
-        background-size: 100% 100%;
-        color: var(--primary-light);
+        &+.collapse .feature__highlight {
+            background-size: 100% 100%;
+            color: var(--primary-light);    
+        }
     }
 }
 
@@ -654,6 +690,7 @@ body>* {
     background-clip: text;
     -webkit-background-clip: text;
     background-attachment: fixed;
+    background-size: 100svw 100svh;
 }
 
 .cascade {
