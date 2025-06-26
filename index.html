@@ -1,245 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <meta name="title" content="Cobranzas GA" />
+    <meta name="description" content="Realizamos todo tipo de gestiones, judiciales y extrajudiciales, pagares pendientes e incobrables y sin coste inicial." />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://www.gacobranzas.com/" />
+    <meta name="og:title" content="Cobranzas GA" />
+    <meta name="og:description" content="Realizamos todo tipo de gestiones, judiciales y extrajudiciales, pagares pendientes e incobrables y sin coste inicial." />
+    <meta name="og:image" content="https://www.gacobranzas.com/imgs/presentacion.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.gacobranzas.com/" />
+    <meta name="twitter:title" content="Cobranzas GA" />
+    <meta name="twitter:description" content="Realizamos todo tipo de gestiones, judiciales y extrajudiciales, pagares pendientes e incobrables y sin coste inicial." />
+    <meta name="twitter:image" content="https://www.gacobranzas.com/imgs/presentacion.jpg" />
+    <meta name="twitter:image:alt" content="Realizamos todo tipo de gestiones, judiciales y extrajudiciales, pagares pendientes e incobrables y sin coste inicial." />
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96-zYcI1yqa.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-D7LBRYb9.svg" />
+    <link rel="shortcut icon" href="/assets/favicon-Dqw5FEze.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-RWE511vF.png" />
+    <link rel="manifest" href="/assets/site-BsBm-b8k.webmanifest" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <title>Cobranzas GA</title>
+  <script type="module" crossorigin src="/assets/index-B9CQoNQk.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-wPxFfh4X.css">
 </head>
 
 <body>
-    <header class="nav-bar">
-        <img src="imgs/logo.png" alt="GACOBRANZAS LOGO">
-        <input type="checkbox" id="nav-check">
-        <label for="nav-check" class="nav-check">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 50 50">
-                <path
-                    d="M 2 9 L 2 11 L 48 11 L 48 9 L 2 9 z M 2 24 L 2 26 L 48 26 L 48 24 L 2 24 z M 2 39 L 2 41 L 48 41 L 48 39 L 2 39 z">
-                </path>
-            </svg>
+    <header class="navbar">
+        <input type="checkbox" id="navbar__check" hidden>
+        <label for="navbar__check" class="menu">
+            <span aria-hidden="true" style="--w: 100%"></span>
+            <span aria-hidden="true" style="--w: 50%"></span>
+            <span aria-hidden="true" style="--w: 25%"></span>
         </label>
-        <ul class="nav-list">
-            <li>
-                <a onclick="closeNav()" href="#">Inicio</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Nosotros</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Servicios</a>
-            </li>
-            <li>
-                <a onclick="closeNav()" href="">Contáctanos</a>
-            </li>
-        </ul>
+        <nav>
+            <label for="navbar__check" class="navbar__overlay"></label>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a class="navbar__link" href="#home">Inicio</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#services">Servicios</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#about">Nosotros</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#contact">Contáctanos</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="section section-diagonal">
-            <div class="cut-1">
-                <h1>Bienvenidos a Cobranzas GA</h1>
-                <h3>Servicios de cobranzas Paraguay SIN COSTE INICIAL</h3>
+    <div class="cascade">
+        <img src="/assets/logo-CnbLIKpn.png" class="logo" alt="Logo gacobranzas">
+    </div>
+    <section class="hero" id="home">
+        <div class="hero__content">
+            <h1 class="hero__title"><span>Cobranzas GA</span></h1>
+            <h2 class="hero__about"><span>Servicios de cobranzas sin costo inicial en Paraguay</span></h2>
+        </div>
+    </section>
+    <section class="services" aria-label="Nuestros servicios" id="services">
+        <h2 class="services__title title text-fadein"><span>Nuestros Servicios</span></h2>
+        <div class="services__cards">
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title">
+                        <span role="term" aria-details="bezier-card--1">
+                            Gestion Judicial y Extra
+                            Judicial
+                        </span>
+                    </summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--1">
+                    <p>
+                        Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto
+                        incluye desde la elaboración de demandas judiciales hasta la implementación de acuerdos
+                        extrajudiciales que faciliten el pago de las obligaciones pendientes. Nuestro equipo de
+                        abogados
+                        y gestores está altamente capacitado para manejar cada etapa del proceso, garantizando un
+                        enfoque estratégico y eficiente.
+                    </p>
+                </div>
             </div>
-            <div class="cut-2">
-                <img src="imgs/cards/0.jpg" alt="EMPLEADOS">
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title">
+                        <span role="term" aria-details="bezier-card--2">Recuperación de Pagos Pendientes</span>
+                    </summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--2">
+                    <p>
+                        Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
+                        gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de
+                        negociación y seguimiento, asegurando que cada gestión sea efectiva y que el dinero
+                        pendiente
+                        vuelva a tus cuentas lo más pronto posible.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <details class="card__check">
+                    <summary class="card__title">
+                        <span role="term" aria-details="bezier-card--3">
+                            Especialización en Deudas
+                            Incobrables
+                        </span>
+                    </summary>
+                </details>
+                <div class="card__content" role="definition" id="bezier-card--3">
+                    <p>
+                        No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para
+                        afrontar los desafíos más difíciles. Contamos con un equipo especializado en la recuperación
+                        de
+                        deudas consideradas incobrables, utilizando métodos y tecnologías de vanguardia para
+                        localizar y
+                        contactar a los deudores, incrementando significativamente las posibilidades de éxito.
+                    </p>
+                </div>
             </div>
         </div>
-        <section class="section section-cards">
-            <h2>Nuestros servicios</h2>
-            <div class="cards">
-                <div class="card">
-                    <i class="fa-solid fa-gavel"></i>
-                    <h4>Gestión Judicial y Extrajudicial</h4>
-                    Llevamos a cabo procesos judiciales y extrajudiciales para la recuperación de deudas. Esto incluye
-                    desde la elaboración de demandas judiciales hasta la implementación de acuerdos extrajudiciales que
-                    faciliten el pago de las obligaciones pendientes. Nuestro equipo de abogados y gestores está
-                    altamente capacitado para manejar cada etapa del proceso, garantizando un enfoque estratégico y
-                    eficiente.
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-money-bills"></i>
-                    <h4>Recuperación de Pagos Pendientes</h4>
-                    Entendemos la importancia de mantener un flujo de caja saludable. Por eso, nos encargamos de
-                    gestionar y cobrar los pagos atrasados de tus clientes. Utilizamos técnicas avanzadas de negociación
-                    y seguimiento, asegurando que cada gestión sea efectiva y que el dinero pendiente vuelva a tus
-                    cuentas lo más pronto posible.
-                </div>
-                <div class="card">
-                    <i class="fa-solid fa-money-bill-transfer"></i>
-                    <h4>Especializacion en Deudas Incobrables</h4>
-                    No todas las deudas son fáciles de recuperar, pero en Cobranzas GA estamos preparados para afrontar
-                    los desafíos más difíciles. Contamos con un equipo especializado en la recuperación de deudas
-                    consideradas incobrables, utilizando métodos y tecnologías de vanguardia para localizar y contactar
-                    a los deudores, incrementando significativamente las posibilidades de éxito.
-                </div>
-            </div>
-        </section>
-        <section class="section section-repeat">
-            <div class="skew-element">
-                <div class="content">
-                    <h2>¿Por qué elegirnos?</h2>
-                    Nuestros servicios no tienen costo inicial. Solo cobramos en función de nuestra productividad,
-                    asegurando que nuestros intereses estén alineados con los tuyos. Esto significa que solo pagas
-                    cuando logramos resultados, lo que demuestra nuestro compromiso con la eficiencia y el éxito.
-                </div>
-            </div>
-        </section>
-        <section class="section section-contact">
-            <div class="section-title">
-                <h2>Contácta con nuestros servicios</h2>
-            </div>
-            <form>
-                <div class="content">
-                    <div class="input-wrapper">
-                        <label for="username">Nombre</label>
-                        <input type="text" name="username" id="username">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="email">Dirección de correo</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="phone">Telefono (opcional)</label>
-                        <input type="text" name="phone" id="phone">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="about">Asunto</label>
-                        <select name="about" id="about">
-                            <option value="employment">Propuesta de empleo</option>
-                            <option value="service">Busco servicio</option>
-                            <option value="other">Otros</option>
-                        </select>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="message">Escribe tu mensaje</label>
-                        <textarea name="message" id="message"></textarea>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="submit" value="Enviar correo">
-                    </div>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <img src="imgs/logo.png" alt="COBRANZASGA LOGO">
-        <div class="content">
-            <div class="wrapper">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>+595 972 883 736</span>
-            </div>
-            <hr>
-            <div class="wrapper">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>San Lorenzo, Paraguay</span>
-            </div>
-            <hr>
-            <div class="wrapper">
-                <i class="fa-solid fa-at"></i>
-                <span>fenixcobranzas123@gmail.com</span>
+    </section>
+    <section class="feature expandable" id="about">
+        <details class="expand">
+            <summary>
+                <h2><span role="term" aria-details="bezier-feature">¿Por qué elegirnos?</span></h2>
+            </summary>
+        </details>
+        <div class="collapse" role="definition" id="bezier-feature">
+            <div class="feature__content">
+                <p style="--delay: 1">
+                    Nuestros servicios no tienen costo inicial.<span class="feature__highlight"> Solo cobramos en
+                        función
+                        de
+                        nuestra productividad</span>, asegurando que nuestros intereses estén alineados con los tuyos.
+                    Esto
+                    significa que solo pagas cuando logramos
+                    resultados, lo que demuestra nuestro compromiso con la eficiencia y el éxito.
+                </p>
+                <img src="/assets/0-CM8jN2IC.jpg" alt="" loading="lazy" style="--delay: 2">
             </div>
         </div>
+    </section>
+    <section class="clients">
+        <h2 class="clients__title title text-fadein">Nuestros clientes</h2>
+        <div class="slider">
+            <img src="/assets/0-Dy1AhlQk.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="/assets/1-D184jRSw.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="/assets/2-BW9R_NHd.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="/assets/3-C7JMd0j2.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="/assets/4-BhstKi8s.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="/assets/5-DgRvgJ_Y.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="/assets/6-CABHXQJi.png" alt="cliente" style="--slider-pos:7" class="slider__item">
+            <img src="/assets/7-C-gyIfvd.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="/assets/8-Dv9maYof.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="/assets/9-DVSF5rD_.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="/assets/10-D6wuZ7l1.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="/assets/11-Dm3aV3p1.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="/assets/12-A1HrIEmD.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="/assets/13-KafHm01e.png" alt="cliente" style="--slider-pos:14" class="slider__item">
+        </div>
+        <div class="slider slider--transform start" style="--slider-depth: 0.8;">
+            <img src="/assets/0-Dy1AhlQk.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="/assets/1-D184jRSw.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="/assets/2-BW9R_NHd.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="/assets/3-C7JMd0j2.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="/assets/4-BhstKi8s.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="/assets/5-DgRvgJ_Y.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="/assets/6-CABHXQJi.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="/assets/7-C-gyIfvd.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="/assets/8-Dv9maYof.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="/assets/9-DVSF5rD_.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="/assets/10-D6wuZ7l1.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="/assets/11-Dm3aV3p1.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="/assets/12-A1HrIEmD.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="/assets/13-KafHm01e.png" alt="cliente" style="--slider-pos:14" class="slider__item">
+        </div>
+        <div class="slider slider--west slider--transform" style="--slider-depth: 0.55;">
+            <img src="/assets/0-Dy1AhlQk.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="/assets/1-D184jRSw.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="/assets/2-BW9R_NHd.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="/assets/3-C7JMd0j2.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="/assets/4-BhstKi8s.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="/assets/5-DgRvgJ_Y.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="/assets/6-CABHXQJi.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="/assets/7-C-gyIfvd.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="/assets/8-Dv9maYof.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="/assets/9-DVSF5rD_.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="/assets/10-D6wuZ7l1.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="/assets/11-Dm3aV3p1.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="/assets/12-A1HrIEmD.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="/assets/13-KafHm01e.png" alt="cliente" style="--slider-pos:14" class="slider__item">
+        </div>
+        <div class="slider slider--transform end" style="--slider-depth: 0.6;">
+            <img src="/assets/0-Dy1AhlQk.png" alt="cliente" style="--slider-pos:1" class="slider__item"><img
+                src="/assets/1-D184jRSw.png" alt="cliente" style="--slider-pos:2" class="slider__item"><img
+                src="/assets/2-BW9R_NHd.png" alt="cliente" style="--slider-pos:3" class="slider__item"><img
+                src="/assets/3-C7JMd0j2.png" alt="cliente" style="--slider-pos:4" class="slider__item"><img
+                src="/assets/4-BhstKi8s.png" alt="cliente" style="--slider-pos:5" class="slider__item"><img
+                src="/assets/5-DgRvgJ_Y.png" alt="cliente" style="--slider-pos:6" class="slider__item"><img
+                src="/assets/6-CABHXQJi.png" alt="cliente" style="--slider-pos:7" class="slider__item"> <img
+                src="/assets/7-C-gyIfvd.png" alt="cliente" style="--slider-pos:8" class="slider__item"><img
+                src="/assets/8-Dv9maYof.png" alt="cliente" style="--slider-pos:9" class="slider__item"><img
+                src="/assets/9-DVSF5rD_.png" alt="cliente" style="--slider-pos:10" class="slider__item"><img
+                src="/assets/10-D6wuZ7l1.png" alt="cliente" style="--slider-pos:11" class="slider__item"><img
+                src="/assets/11-Dm3aV3p1.png" alt="cliente" style="--slider-pos:12" class="slider__item"><img
+                src="/assets/12-A1HrIEmD.png" alt="cliente" style="--slider-pos:13" class="slider__item"><img
+                src="/assets/13-KafHm01e.png" alt="cliente" style="--slider-pos:14" class="slider__item">
+        </div>
+    </section>
+    <footer class="contact" id="contact">
+        <div class="contact__content text-fadein" style="--per: 85%">
+            <p class="title">Número</p>
+            +595 972 883 736
+            <p class="title">Ubicación</p>
+            San Lorenzo, Paraguay
+            <p class="title">Correo</p>
+            fenixcobranzas123@gmail.com
+        </div>
+        <form action="https://formspree.io/f/mrbkanbz" method="POST" class="contact__form" id="contact__form">
+            <h2 class="contact__title title text-fadein">Contáctanos</h2>
+            <label>
+                Nombre
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Correo
+                <input type="email" name="email" required>
+            </label>
+            <label>
+                Asunto
+                <select name="type" required>
+                    <option value="" disabled selected>Elige un asunto</option>
+                    <option value="Propuesta de Trabajo">Propuesta de empleo</option>
+                    <option value="Busco Servicio">Busco servicio</option>
+                    <option value="Otra Propuesta">Otros</option>
+                </select>
+            </label>
+            <textarea name="message" rows="10" cols="30" minlength="20" aria-label="Cuerpo del correo" placeholder="Cuerpo del correo"
+                required></textarea>
+            <input type="text" name="_gotcha" />
+            <input type="submit" value="Enviar">
+            <span class="blanket" aria-hidden="true"></span>
+        </form>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
-    <script>
-        function closeNav() {
-            document.getElementById("nav-check").checked = false;
-        }
-
-        function getStyle(str, prop) {
-            let cssVar = styles.getPropertyValue(prop);
-
-            if (cssVar == "")
-                console.log(prop + ": variable no encontrada");
-
-            return str + " " + cssVar;
-        }
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        const styles = getComputedStyle(document.documentElement);
-        const tl = gsap.timeline({ 
-            scrollTrigger: {
-                target: ".section",
-                start: "top top",
-                end: "bottom +=120%",
-                scrub: 1,
-                markers: true
-            }       
-        });
-        const tlHero = gsap.timeline({defaults: { ease: "expo.inOut", duration: 1 }});
-        tlHero.from(".nav-bar", {
-            backgroundImage: "linear-gradient(0deg, #00000000 10%, #000000ff 40%)",
-        });
-        tlHero.fromTo(".section-diagonal .cut-2", {
-            opacity: 0,
-        }, {
-            opacity: 1,
-            maskImage: "linear-gradient(to left, black 50%, transparent 100%)",
-            duration: 1,
-            ease: "power2.out"
-        });
-        tlHero.fromTo(".section-diagonal .cut-1", {
-            opacity: 0,
-            xPercent: -100
-        }, {
-            opacity: 1,
-            xPercent: 0,
-        }, "<");
-        tlHero.fromTo(".section-diagonal .cut-1 h1", {
-            textShadow: "0px 0px"
-        }, {
-            textShadow: getStyle("9px 9px", "--secondary-yellow")
-        });
-
-        if (window.innerWidth >= 992) {
-            tl.fromTo(".section-cards .cards .card", {
-                skewX: "0deg",
-            }, {
-                skewX: "-5deg",
-            });
-
-            tl.fromTo(".section-cards .cards .card", {
-                boxShadow: "0px 0px #000"
-            }, {
-                boxShadow: getStyle("14px 14px", "--secondary-yellow"),
-            });
-        }
-        
-        tl.from(".section-repeat .skew-element", {
-            opacity: 0,
-            transform: "skewY(0deg)",
-            boxShadow: "0px 0px #000",
-            ease: "power4.inOut"
-        });
-        tl.fromTo((".section-contact h2"), {
-            padding: "0px",
-            opacity: 0,
-            xPercent: -100,
-        }, {
-            padding: "30px 40px",
-            opacity: 1,
-            xPercent: 0,
-            backgroundColor: getStyle("", "--secondary-yellow"),
-            clipPath: "polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%)"
-        });
-        tl.to(".section-contact .content", {
-            xPercent: window.innerWidth > 992 ? -5 : 0,
-            yPercent: -5,
-            boxShadow: getStyle("10px 5px", "--secondary-yellow"),
-            onStart: () => { document.getElementById("username").focus() }
-        });
-    </script>
+    <details class="mode">
+        <summary></summary>
+    </details>
 </body>
 
 </html>
